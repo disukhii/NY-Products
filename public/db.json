@@ -65,8 +65,8 @@
       "id": 6,
       "imageUrl": "https://pngimage.net/wp-content/uploads/2018/06/%D1%81%D0%B2%D0%B5%D0%B6%D0%B0%D1%8F-%D0%B2%D1%8B%D0%BF%D0%B5%D1%87%D0%BA%D0%B0-png-3.png",
       "name": "Name #7",
-      "types": [0, 1],
-      "sizes": [26, 30, 40],
+      "types": [],
+      "sizes": [124],
       "price": 38,
       "category": 4,
       "rating": 9
@@ -75,8 +75,8 @@
       "id": 7,
       "imageUrl": "https://i.dlpng.com/static/png/381148_preview.png",
       "name": "Name #8",
-      "types": [0, 1],
-      "sizes": [26, 30, 40],
+      "types": [],
+      "sizes": [242],
       "price": 270,
       "category": 3,
       "rating": 10
@@ -85,8 +85,8 @@
       "id": 8,
       "imageUrl": "https://ilmolino.ua/img/article/54/43_main.png",
       "name": "Name #9",
-      "types": [0, 1],
-      "sizes": [26, 30, 40],
+      "types": [],
+      "sizes": [15],
       "price": 244,
       "category": 3,
       "rating": 10
@@ -95,8 +95,8 @@
       "id": 9,
       "imageUrl": "https://ilmolino.ua/img/article/8/29_main.png",
       "name": "Name #10",
-      "types": [0, 1],
-      "sizes": [26, 30, 40],
+      "types": [],
+      "sizes": [8],
       "price": 285,
       "category": 2,
       "rating": 7
