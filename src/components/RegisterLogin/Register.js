@@ -1,6 +1,9 @@
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './RegisterLoginStyle.css'
+
+
 class Register extends Component {
 	constructor(props) {
 		super(props);
@@ -32,19 +35,23 @@ class Register extends Component {
 			fullname: '',
 			email: '',
 			password: ''
-		});
-	}
+        });
+        
+    }
+    
+
 
 	render() {
 		return (
+            
 			<div className="register">
 				<form onSubmit={this.displayLogin}>
-					<h2>Register</h2>
+					<h2>Реєстрація</h2>
 
 					<div className="name">
 						<input
 							type="text"
-							placeholder="Full Name"
+							placeholder="Повне імя"
 							name="fullname"
 							value={this.state.fullname}
 							onChange={this.update}
@@ -54,7 +61,7 @@ class Register extends Component {
 					<div className="email">
 						<input
 							type="text"
-							placeholder="Enter your email"
+							placeholder="Введіть ваш email"
 							name="email"
 							value={this.state.email}
 							onChange={this.update}
@@ -64,24 +71,28 @@ class Register extends Component {
 					<div className="pasword">
 						<input
 							type="password"
-							placeholder="Password"
+							placeholder="Пароль"
 							name="password"
 							value={this.state.password}
 							onChange={this.update}
 						/>
+                        
 					</div>
 
 					<div className="password">
-						<input type="password" placeholder="Confirm Password" name="password1" />
+						<input type="password" placeholder="Повторіть пароль" name="password1" />
 					</div>
-
-					<button id="button-reg-log" type="submit" value="Login">Accept</button>
+                    <Link to="/login">
+					<button id="button-reg-log" type="submit" value="Login">Зареєструватись</button>
+                    </Link>
 				</form>
 
-				<Link to="/login">Login Here</Link>
+				<Link to="/login">Маю вже акаунт!</Link>
+                
 			</div>
 		);
 	}
 }
+
 
 export default Register;

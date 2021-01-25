@@ -1,0 +1,85 @@
+#button-reg-log{
+    position: relative;
+left: 50%;
+transform: translate(-50%, 0);
+    --ripple-background: white;
+    --ripple-opacity: 0.3;
+    --ripple-duration: 600ms;
+    border: 1px solid #e02200;
+    border-radius: 0;
+    padding: 0.75em 3em;
+    margin-bottom: 3%;
+    font-size: 1em;
+    outline: none;
+    display: block;
+    background: tomato;
+    color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+
+.login,
+.register {
+  width: 400px;
+  margin:auto;
+}
+h2 {
+    padding: 5%;
+}
+.login h2,
+.register h2 {
+  font-size: 45px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.login a {
+  text-align: center;
+}
+input {
+    position: relative;
+left: 50%;
+transform: translate(-50%, 0)
+}
+
+input[type='text'] {
+  background-color: #e6e6e6;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 85%;
+  padding: 20px 30px;
+}
+
+input[type='password'] {
+  background-color: #e6e6e6;
+  padding: 20px 30px;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 85%;
+}
+
+input[type='submit'] {
+  padding: 15px 0px;
+  background-color: #827ffe;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  width: 100%;
+}
+
+.check {
+  font-size: 16px;
+}

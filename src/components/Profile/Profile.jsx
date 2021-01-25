@@ -1,9 +1,12 @@
 import React from 'react'
-import Form from '../Register/Form.jsx'
+
+import "./ProfileStyle.css"
 function Profile() {
     return (
-        <div>
-            <Form ></Form>
+        <div className="login">
+            <h3>Ваше імя: </h3>
+            <h3>Ваш email: </h3>
+
         </div>
     )
 }

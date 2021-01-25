@@ -37,11 +37,11 @@ class Login extends Component {
 		return (
 			<div className="login">
 				<form onSubmit={this.displayLogin}>
-					<h2>Login</h2>
+					<h2>Залогінитись</h2>
 					<div className="username">
 						<input
 							type="text"
-							placeholder="Username..."
+							placeholder="Ваше імя..."
 							value={this.state.email}
 							onChange={this.update}
 							name="email"
@@ -51,17 +51,18 @@ class Login extends Component {
 					<div className="password">
 						<input
 							type="password"
-							placeholder="Password..."
+							placeholder="Пароль..."
 							value={this.state.password}
 							onChange={this.update}
 							name="password"
 						/>
 					</div>
-
-					<button id="button-reg-log" type="submit" value="Login">Login</button>
+                    <Link to='/profile'>
+					<button id="button-reg-log" type="submit" value="Login">Увійти</button>
+                    </Link>
 				</form>
 
-				<Link to="/register">Create an account</Link>
+				<Link to="/register">Створити новий акаунт</Link>
 			</div>
 		);
 	}

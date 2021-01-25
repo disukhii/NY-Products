@@ -5,6 +5,7 @@ import { Button } from './components';
 import { Home, Cart } from './pages';
 import Login from './components/RegisterLogin/Login'
 import Register from './components/RegisterLogin/Register'
+import Profile from './components/Profile/Profile.jsx'
 import './App.css'
 import logoSvg from './assets/img/download.png';
 
@@ -30,10 +31,10 @@ function App() {
           <div className="header__cart">
             <Route exact path="/">
               <Link to="/register">
-              <Button className="button--cart2">Register</Button>
+              <Button id="button--cart2">Регістрація</Button>
               </Link>
               <Link to="/profile">
-              <Button className="button--cart3">Your Profile</Button>
+              <Button className="button--cart3">Ваш профіль</Button>
               </Link>
               <Link to="/cart">
                 <Button className="button--cart">
@@ -77,6 +78,7 @@ function App() {
           <Route path="/cart" component={Cart}></Route>
           <Route exact path="/login" component={Login} />
         <Route path="/register" component={Register} />
+        <Route path="/profile" component={Profile} />
         </div>
       </div>
     </div>
