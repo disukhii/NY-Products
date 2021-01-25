@@ -29,7 +29,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
 
   const SelectorForCategory = (value) => {
     let category = (value) => {
-      if (value == 1) {
+      if (value === 1) {
        return( <div className="pizza-block__selector">
       <ul>
         {typeNames.map((curType, curIndex, qe) => (

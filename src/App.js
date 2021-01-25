@@ -1,9 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
-import Form from './components/Register/Form.jsx'
 import { Button } from './components';
 import { Home, Cart } from './pages';
+import Login from './components/RegisterLogin/Login'
+import Register from './components/RegisterLogin/Register'
 import './App.css'
 import logoSvg from './assets/img/download.png';
 
@@ -28,8 +29,11 @@ function App() {
           </Link>
           <div className="header__cart">
             <Route exact path="/">
-              <Link to="/Register">
+              <Link to="/register">
               <Button className="button--cart2">Register</Button>
+              </Link>
+              <Link to="/profile">
+              <Button className="button--cart3">Your Profile</Button>
               </Link>
               <Link to="/cart">
                 <Button className="button--cart">
@@ -71,6 +75,8 @@ function App() {
         <div className="container">
           <Route exact path="/" component={Home}></Route>
           <Route path="/cart" component={Cart}></Route>
+          <Route exact path="/login" component={Login} />
+        <Route path="/register" component={Register} />
         </div>
       </div>
     </div>
