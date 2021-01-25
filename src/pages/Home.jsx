@@ -39,7 +39,7 @@ function App() {
       <div className={classNames('content__top', { noclick: isLoading })}>
         <Categories
           activeItem={filters.category}
-          items={['Усі', 'Піца', 'Мясні блюда', 'Салати', 'Випічка', 'Вода' ]}
+          items={['Усі', 'Піца', 'М\'ясні блюда', 'Салати', 'Випічка', 'Вода' ]}
           onClick={selectCategory}
         />
         <SortPopup sortBy={filters.sortBy} onSelect={selectSort} />
