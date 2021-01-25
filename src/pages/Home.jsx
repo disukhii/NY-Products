@@ -24,6 +24,7 @@ function App() {
     },
     [dispatch],
   );
+  console.log(selectCategory)
 
   React.useEffect(() => {
     dispatch(pizzasActions.fetchItems(filters));
@@ -44,7 +45,6 @@ function App() {
         <SortPopup sortBy={filters.sortBy} onSelect={selectSort} />
       </div>
       <h2 className="content__title">Усі блюда:</h2>
-      {console.log(isLoading)}
       <div className="content__items">
         {pizzas && !isLoading
           ? pizzas.map(item => (

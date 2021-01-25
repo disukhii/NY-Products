@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
 import { Button } from '../';
-
+import {} from '../Categories/index'
 import './PizzaBlock.scss';
 
-const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading }) => {
+const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category }) => {
+
   const typeNames = ['тонка', 'корка з сосискою'];
   const availableSizes = [26, 30, 40];
   const addedCount = cartItems[id] ? cartItems[id].length : 0;
@@ -20,46 +20,64 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
       size,
       type,
       price,
+      category
     };
     if (onAdd) {
       onAdd(obj);
     }
   };
 
+  const SelectorForCategory = (value) => {
+    let category = (value) => {
+      if (value == 1) {
+       return( <div className="pizza-block__selector">
+      <ul>
+        {typeNames.map((curType, curIndex, qe) => (
+          <li
+            key={curIndex}
+            onClick={() => setType(curIndex)}
+            className={classNames({
+              active: curIndex === type,
+              disabled: !types.includes(curIndex),
+            })}>
+            {curType}
+          </li>
+        ))}
+      </ul>
+      <ul>
+        {availableSizes.map((curSize, curIndex) => (
+          <li
+            key={curIndex}
+            onClick={() => setSize(curSize)}
+            className={classNames({
+              active: curSize === size,
+              disabled: !sizes.includes(curSize),
+            })}>
+            {curSize} см.
+          </li>
+        ))}
+      </ul>
+    </div>)
+      }  else {
+        return (<div className="other-product"></div>)
+      }
+
+    }
+    return (
+    category(value)
+      
+    )
+  }
+ 
   return (
+    
     <div className={classNames('pizza-block', { 'pizza-block--loading': isLoading })}>
       <div className="pizza-block__image">
         <img src={imageUrl} alt="Pizza" />
       </div>
       <h4 className="pizza-block__title">{name}</h4>
-      <div className="pizza-block__selector">
-        <ul>
-          {typeNames.map((curType, curIndex, qe) => (
-            <li
-              key={curIndex}
-              onClick={() => setType(curIndex)}
-              className={classNames({
-                active: curIndex === type,
-                disabled: !types.includes(curIndex),
-              })}>
-              {curType}
-            </li>
-          ))}
-        </ul>
-        <ul>
-          {availableSizes.map((curSize, curIndex) => (
-            <li
-              key={curIndex}
-              onClick={() => setSize(curSize)}
-              className={classNames({
-                active: curSize === size,
-                disabled: !sizes.includes(curSize),
-              })}>
-              {curSize} см.
-            </li>
-          ))}
-        </ul>
-      </div>
+      
+      {SelectorForCategory(category)}
       <div className="pizza-block__bottom">
         <div className="pizza-block__price">{price} гривень</div>
         <Button onClick={onAddClick} className="button--add" outline>

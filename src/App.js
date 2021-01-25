@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Route, Link } from 'react-router-dom';
-
+import Form from './components/Register/Form.jsx'
 import { Button } from './components';
 import { Home, Cart } from './pages';
-
+import './App.css'
 import logoSvg from './assets/img/download.png';
 
 function App() {
@@ -28,6 +28,9 @@ function App() {
           </Link>
           <div className="header__cart">
             <Route exact path="/">
+              <Link to="/Register">
+              <Button className="button--cart2">Register</Button>
+              </Link>
               <Link to="/cart">
                 <Button className="button--cart">
                   <span>{cartTotalPrice} Гривень</span>
