@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const CartItem = props => {
   const { imageUrl, name, type, size, count, price, onMinus, onPlus, onRemove } = props;
   const typeNames = ['тонка', 'корка зі сосискою'];
-
   return (
     <div class="cart__item">
       <div class="cart__item-img">
@@ -13,7 +12,7 @@ const CartItem = props => {
       <div class="cart__item-info">
         <h3>{name}</h3>
         <p>
-        Вид піци - {typeNames[type]} , {size} см.
+         Ви замовили: {typeNames[type]} , {size} см.
         </p>
       </div>
       <div class="cart__item-count">

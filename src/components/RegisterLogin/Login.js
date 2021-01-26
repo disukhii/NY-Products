@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './RegisterLoginStyle.css'
+
+
+
 class Login extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
 			email: '',
-			password: ''
+            password: ''
 		};
 
 		this.update = this.update.bind(this);

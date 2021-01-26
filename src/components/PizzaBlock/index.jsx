@@ -8,7 +8,7 @@ import './PizzaBlock.scss';
 const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category }) => {
 
   const typeNames = ['тонка', 'корка з сосискою'];
-  const availableSizes = [26, 30, 40];
+  const availableSizes = [ 26, 30, 40];
   const addedCount = cartItems[id] ? cartItems[id].length : 0;
 
   const [size, setSize] = React.useState(availableSizes[0]);
@@ -25,6 +25,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
     if (onAdd) {
       onAdd(obj);
     }
+    return category
   };
 
   const SelectorForCategory = (value) => {
