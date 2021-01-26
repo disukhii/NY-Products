@@ -8,7 +8,7 @@ import './PizzaBlock.scss';
 const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category }) => {
 
   const typeNames = ['тонка', 'корка з сосискою'];
-  const availableSizes = [ 26, 30, 40];
+  const availableSizes = [26, 30, 40];
   const addedCount = cartItems[id] ? cartItems[id].length : 0;
 
   const [size, setSize] = React.useState(availableSizes[0]);
@@ -27,6 +27,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
     }
     return category
   };
+  
 
   const SelectorForCategory = (value) => {
     let category = (value) => {
@@ -69,7 +70,15 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
       
     )
   }
- 
+ let price2 = 0
+  if (size === 26) {
+   price2 = price
+  }
+ else if (size === 30) {
+  price2 = price + 26
+ } else if (size === 40) {
+     price2 = price + 63
+ } 
   return (
     
     <div className={classNames('pizza-block', { 'pizza-block--loading': isLoading })}>
@@ -80,7 +89,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
       
       {SelectorForCategory(category)}
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">{price} гривень</div>
+        <div className="pizza-block__price">{price2} гривень</div>
         <Button onClick={onAddClick} className="button--add" outline>
           <svg
             width="12"

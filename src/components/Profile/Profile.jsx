@@ -1,14 +1,13 @@
 import React from 'react'
+import Register from '../RegisterLogin/Register.js'
+export default class Profile extends Register {
 
-import "./ProfileStyle.css"
-function Profile() {
-    return (
-        <div className="login">
-            <h3>Ваше імя: </h3>
-            <h3>Ваш email: </h3>
+    render() {
 
-        </div>
-    )
+        return (
+            <div>
+                <p>asdasdasd{this.state.fullname}</p>
+            </div>
+        )
+    }
 }
-
-export default Profile

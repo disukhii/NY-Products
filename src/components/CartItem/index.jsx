@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CartItem = props => {
-  const { imageUrl, name, type, size, count, price, onMinus, onPlus, onRemove } = props;
+  const { imageUrl, name, type, size,price, count, onMinus, onPlus, onRemove } = props;
   const typeNames = ['тонка', 'корка зі сосискою'];
   return (
     <div class="cart__item">

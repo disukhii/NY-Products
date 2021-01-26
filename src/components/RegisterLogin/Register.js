@@ -25,21 +25,18 @@ class Register extends Component {
 		this.setState({
 			[name]: value
 		});
+		console.log(name)
 	}
 
 	displayLogin(e) {
 		e.preventDefault();
 		console.log('You have successfully registered');
 		console.log(this.state);
-		this.setState({
-			fullname: '',
-			email: '',
-			password: ''
-        });
+		
         
     }
     
-
+	
 
 	render() {
 		return (
@@ -82,13 +79,13 @@ class Register extends Component {
 					<div className="password">
 						<input type="password" placeholder="Повторіть пароль" name="password1" />
 					</div>
-                    <Link to="/login">
+                    
 					<button id="button-reg-log" type="submit" value="Login">Зареєструватись</button>
-                    </Link>
+                    
 				</form>
 
 				<Link to="/login">Маю вже акаунт!</Link>
-                
+                <p>{this.saveData}</p>
 			</div>
 		);
 	}

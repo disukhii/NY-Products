@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './RegisterLoginStyle.css'
+import Register from './Register'
 
 
 
-class Login extends Component {
+class Login extends Register {
 	constructor(props) {
 		super(props);
 
@@ -16,6 +17,7 @@ class Login extends Component {
 		this.update = this.update.bind(this);
 
 		this.displayLogin = this.displayLogin.bind(this);
+		console.log(this.state)
 	}
 
 	update(e) {
@@ -30,10 +32,7 @@ class Login extends Component {
 		e.preventDefault();
 		console.log('You are logged in');
 		console.log(this.state);
-		this.setState({
-			email: '',
-			password: ''
-		});
+		
 	}
 
 	render() {
@@ -60,9 +59,9 @@ class Login extends Component {
 							name="password"
 						/>
 					</div>
-                    <Link to='/profile'>
-					<button id="button-reg-log" type="submit" value="Login">Увійти</button>
-                    </Link>
+                   
+					<button id="button-reg-log" value="Login">Увійти</button>
+                    
 				</form>
 
 				<Link to="/register">Створити новий акаунт</Link>

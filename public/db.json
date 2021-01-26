@@ -3,7 +3,7 @@
     {
       "id": 0,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
-      "name": "Name #1",
+      "name": "Маргарита",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 199,
@@ -14,7 +14,7 @@
     {
       "id": 1,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
-      "name": "Name #2",
+      "name": "Гавайська",
       "types": [0],
       "sizes": [26, 40],
       "price": 144,
@@ -24,7 +24,7 @@
     {
       "id": 2,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
-      "name": "Name #3",
+      "name": "Капрічоза",
       "types": [0],
       "sizes": [26, 40],
       "price": 295,
@@ -34,8 +34,8 @@
     {
       "id": 3,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
-      "name": "Name #4",
-      "types": [1],
+      "name": "Кальцоне",
+      "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 275,
       "category": 1,
@@ -44,7 +44,7 @@
     {
       "id": 4,
       "imageUrl": "https://pngimg.com/uploads/cocacola/cocacola_PNG4.png",
-      "name": "Name #5",
+      "name": "Кола",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 23,
@@ -54,7 +54,7 @@
     {
       "id": 5,
       "imageUrl": "https://pngimg.com/uploads/cookie/cookie_PNG13677.png",
-      "name": "Name #6",
+      "name": "Печиво - шоколадне",
       "types": [0],
       "sizes": [30, 40],
       "price": 64,
@@ -64,7 +64,7 @@
     {
       "id": 6,
       "imageUrl": "https://pngimage.net/wp-content/uploads/2018/06/%D1%81%D0%B2%D0%B5%D0%B6%D0%B0%D1%8F-%D0%B2%D1%8B%D0%BF%D0%B5%D1%87%D0%BA%D0%B0-png-3.png",
-      "name": "Name #7",
+      "name": "Круасан",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 38,
@@ -73,8 +73,8 @@
     },
     {
       "id": 7,
-      "imageUrl": "https://lh3.googleusercontent.com/proxy/dr5AlRNCON2x4K-MBcuV36ugt-j_69G6TdVlEYf_cVFOLts-GeTYyRrcp2t-ZDoVWB067nbaJBdwSA05VRNvvylYSHgJI67knMAnWAnOi53KKe0sJqgpolVa-3sjW6oapi37WNOBzjsgwgdMYeQLBQRtcwbEpHdTqOyRJTY6DoV9HGmJFSUI6mIFtu2BgrY",
-      "name": "Name #8",
+      "imageUrl": "https://www.pngkey.com/png/full/315-3157807_jamaican-jerk-caesar-salad.png",
+      "name": "Цезарь",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 270,
@@ -84,7 +84,7 @@
     {
       "id": 8,
       "imageUrl": "https://ilmolino.ua/img/article/54/43_main.png",
-      "name": "Name #9",
+      "name": "Айсберг",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 244,
@@ -93,8 +93,78 @@
     },
     {
       "id": 9,
+      "imageUrl": "https://cookeryschool.com.ua/wp-content/uploads/2020/02/bazovyj-kurs-povara.png",
+      "name": "Куряча лапка",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 285,
+      "category": 2,
+      "rating": 7
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://pngimg.com/uploads/hot_dog/hot_dog_PNG10217.png",
+      "name": "Хот-дог",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 56,
+      "category": 4,
+      "rating": 7
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://avatanplus.com/files/resources/original/579769db455d615627758094.png",
+      "name": "Спрайт",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 22,
+      "category": 5,
+      "rating": 7
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://pngimg.com/uploads/fanta/fanta_PNG23.png",
+      "name": "Фанта",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 22,
+      "category": 5,
+      "rating": 7
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://cookeryschool.com.ua/wp-content/uploads/2019/12/Bezuprechnoe-mjaso-mk.png",
+      "name": "Ребришко",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 199,
+      "category": 2,
+      "rating": 7
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://ru.coca-colahellenic.com/ru/our-24-7-portfolio/Sports-and-energy-drinks/Burn/_jcr_content/root/container_header/teaser_2144592093.coreimg.png/1598384761045/russia-burn-original-450ml-dry-can-hero-1119-lr.png",
+      "name": "Бьорн",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 59,
+      "category": 5,
+      "rating": 7
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://vaikesaare.ee/wp-content/uploads/2020/04/product7.png",
+      "name": "Пиріг",
+      "types": [0, 1],
+      "sizes": [26, 30, 40],
+      "price": 132,
+      "category": 4,
+      "rating": 7
+    },
+    {
+      "id": 16,
       "imageUrl": "https://ilmolino.ua/img/article/8/29_main.png",
-      "name": "Name #10",
+      "name": "Яловитчина",
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 285,
