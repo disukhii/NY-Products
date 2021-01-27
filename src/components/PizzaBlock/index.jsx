@@ -5,12 +5,13 @@ import { Button } from '../';
 import {} from '../Categories/index'
 import './PizzaBlock.scss';
 
-const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category}) => {
-
+const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category}, price2, categoryes) => {
+  categoryes = 0
+  
   const typeNames = ['тонка', 'корка з сосискою'];
   const availableSizes = [26, 30, 40];
   const addedCount = cartItems[id] ? cartItems[id].length : 0;
-
+  categoryes = category + 0
   const [size, setSize] = React.useState(availableSizes[0]);
   const [type, setType] = React.useState(0);
 
@@ -67,10 +68,10 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
     }
     return (
     category(value)
-      
+    
     )
   }
- let price2 = 0
+ price2 = 0
   if (size === 26) {
    price2 = price
   }
@@ -79,6 +80,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
  } else if (size === 40) {
      price2 = price + 63
  } 
+ 
   return (
     
     <div className={classNames('pizza-block', { 'pizza-block--loading': isLoading })}>
@@ -108,7 +110,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
     </div>
   );
 };
-
+export let category2 = 0
 PizzaBlock.propTypes = {
   id: PropTypes.number,
   imageUrl: PropTypes.string,

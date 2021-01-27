@@ -1,8 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CartItem = props => {
-  const { imageUrl, name, type, size,price, count, onMinus, onPlus, onRemove } = props;
+
+const CartItem = (props) => {
+  let { imageUrl, name, type, size, price, count, onMinus, onPlus, onRemove, price2 } = props;
+   price2 = 0
+  if (size === 26) {
+   price2 = price
+  }
+ else if (size === 30) {
+  price2 = price + 26
+ } else if (size === 40) {
+     price2 = price + 63
+ } 
   const typeNames = ['тонка', 'корка зі сосискою'];
   return (
     <div class="cart__item">
@@ -53,7 +63,7 @@ const CartItem = props => {
         </div>
       </div>
       <div class="cart__item-price">
-        <b>{price} ₴</b>
+        <b>{price2} ₴</b>
       </div>
       <div onClick={onRemove} class="cart__item-remove">
         <div class="button button--outline button--circle">

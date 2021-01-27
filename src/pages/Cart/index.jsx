@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 import { map } from 'lodash';
-
 import { cartActions } from '../../redux/actions';
 
 import { CartItem } from '../../components';
@@ -10,7 +9,15 @@ import Empty from './Empty';
 
 import './Cart.scss';
 
+console.log(CartItem.props)
+
 const Cart = () => {
+
+
+
+
+
+  
   const dispatch = useDispatch();
   const { items, totalPrice, itemsCount } = useSelector(state => state.cart);
 
