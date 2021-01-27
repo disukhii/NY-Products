@@ -5,7 +5,7 @@ import { Button } from '../';
 import {} from '../Categories/index'
 import './PizzaBlock.scss';
 
-const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category }) => {
+const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category}) => {
 
   const typeNames = ['тонка', 'корка з сосискою'];
   const availableSizes = [26, 30, 40];
