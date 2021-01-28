@@ -9,10 +9,10 @@ const SortPopup = ({ sortBy, onSelect }) => {
     { value: 'price', label: 'Ціні' },
     { value: 'name', label: 'Алфавіту' },
   ];
-  const selected = items.find(obj => obj.value === sortBy);
+  const selected = items.find(obj => obj.value === sortBy); // <PopupMenu /> - викликає цілий імпортований блок і його рендерить
   return (
     <div className="sort">
-      <PopupMenu onClick={onSelect} activeItem={selected.value} items={items}>
+      <PopupMenu onClick={onSelect} activeItem={selected.value} items={items}>  
         <div className="sort__label">
           <b>Сортування по:</b>
           <span>{selected.label}</span>

@@ -14,7 +14,7 @@ function App() {
     state.cart.totalPrice,
     state.cart.count,
   ]);
-
+// головний файл нашого додатку, де майже все вже готове рендериться тут і виводиться на головну сторінку
   return (
     <div className="wrapper">
       <div className="header">
@@ -74,7 +74,7 @@ function App() {
       </div>
       <div className="content">
         <div className="container">
-          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/" component={Home}></Route> 
           <Route path="/cart" component={Cart}></Route>
           <Route exact path="/login" component={Login} />
         <Route path="/register" component={Register} />
@@ -84,5 +84,5 @@ function App() {
     </div>
   );
 }
-
+// exact в Route - це строге посилання, також ми трохи вище вказали на те, що певний компонент буде належити певному посиланню
 export default App;

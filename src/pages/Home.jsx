@@ -1,12 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 import { useDispatch, useSelector } from 'react-redux';
-
+// useSelector - при його відправлені дія виконується поверхносне зрівнення минулого значення результата селектора і теперішнього.
 import { PizzaBlock, Categories, SortPopup } from '../components';
 import { pizzasActions, cartActions, filtersActions } from '../redux/actions';
 
 function App() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // dispatch передає збережені дані з redux і передає їх за допомогою Actions
   const [pizzas, isLoading, cartItems, filters] = useSelector(state => [
     state.pizzas.items,
     state.pizzas.isLoading,
@@ -33,7 +33,7 @@ function App() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+// Все що імпортовано і ретурниться з великої букви і зеленим (<Categories /> це все блоки коду (файли) які ми прописували в інших папках)
   return (
     <React.Fragment>
       <div className={classNames('content__top', { noclick: isLoading })}>

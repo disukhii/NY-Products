@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CartEmptyImg from '../../assets/img/empty-cart.png';
+import { Link } from 'react-router-dom'; // посилання на іншу сторінку
+import CartEmptyImg from '../../assets/img/empty-cart.png'; // картинка імпортована
 
 const Empty = () => {
   return (
@@ -14,7 +14,7 @@ const Empty = () => {
         Для того, щоб добавити продукт у корзину, перейдіть на головну сторінку.
       </p>
       <img src={CartEmptyImg} alt="Empty cart" />
-      <Link to="/" class="button button--black">
+      <Link to="/" class="button button--black"> 
         <span>Повернутись назад</span>
       </Link>
     </React.Fragment>

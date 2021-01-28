@@ -9,16 +9,12 @@ import Empty from './Empty';
 
 import './Cart.scss';
 
-console.log(CartItem.props)
 
-const Cart = () => {
-
-
-
+const Cart = () => { // головна функція
 
 
   
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // dispatch передає збережені дані з redux і передає їх за допомогою Actions
   const { items, totalPrice, itemsCount } = useSelector(state => state.cart);
 
   const plusCartItem = React.useCallback(id => dispatch(cartActions.plusItem(id)), [dispatch]);

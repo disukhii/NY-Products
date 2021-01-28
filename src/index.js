@@ -7,7 +7,7 @@ import store from './redux/store';
 import App from './App';
 
 import './scss/index.scss';
-
+// index.js тут рендериться вся робота додатку
 ReactDOM.render(
   <Provider store={store}>
     <Router>

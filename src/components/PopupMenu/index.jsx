@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import PropTypes from 'prop-types'; // вказівник
+import classNames from 'classnames'; // взаємодія з класами
 
 import './PopupMenu.scss';
-
+// https://uk.reactjs.org/docs/hooks-reference.html#useeffect   -- тут усі Хукі які використовуються у проекті
 const PopupMenu = ({ children, items, onClick, activeItem }) => {
-  const [visiblePopup, setVisiblePopup] = React.useState(false);
-  const blockRef = React.useRef(null);
+  const [visiblePopup, setVisiblePopup] = React.useState(false);  // useState()
+  const blockRef = React.useRef(null); 
   const clickOutsideCallback = React.useCallback(e => {
     if (!e.path.includes(blockRef.current)) {
       setVisiblePopup(false);
@@ -14,7 +14,7 @@ const PopupMenu = ({ children, items, onClick, activeItem }) => {
   }, []);
 
   const handleClick = item => {
-    if (onClick) {
+    if (onClick) {   
       onClick(item);
     }
     setVisiblePopup(false);
@@ -24,7 +24,7 @@ const PopupMenu = ({ children, items, onClick, activeItem }) => {
     document.querySelector('body').addEventListener('click', clickOutsideCallback);
     return () => document.querySelector('body').removeEventListener('click', clickOutsideCallback);
   }, [clickOutsideCallback]);
-
+// React.Фрагменти дозволяють формувати список дочірніх елементів, не створюючи зайвих вузлів в DOM
   return (
     <React.Fragment>
       <div onClick={() => setVisiblePopup(!visiblePopup)}>{children}</div>
