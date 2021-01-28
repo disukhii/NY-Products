@@ -4,26 +4,26 @@ import { Link } from 'react-router-dom';
 import './RegisterLoginStyle.css'
 
 
-class Register extends Component {
-	constructor(props) {
+class Register extends Component { // класновий компонент
+	constructor(props) { // - приймає props
 		super(props);
 
-		this.state = {
+		this.state = { // - state -  обьэкт
 			fullname: '',
 			email: '',
 			password: ''
 		};
 
-		this.update = this.update.bind(this);
+		this.update = this.update.bind(this); // дозволяє вносити зміни в input
 
-		this.displayLogin = this.displayLogin.bind(this);
+		this.displayLogin = this.displayLogin.bind(this); // дозволяє зберігати дані з input
 	}
 
 	update(e) {
 		let name = e.target.name;
 		let value = e.target.value;
 		this.setState({
-			[name]: value
+			[name]: value    // присваює значення у порядку ключа і значення
 		});
 		console.log(name)
 	}
@@ -31,14 +31,14 @@ class Register extends Component {
 	displayLogin(e) {
 		e.preventDefault();
 		console.log('You have successfully registered');
-		console.log(this.state);
+		console.log(this.state); // перевірочна станція чи все працює
 		
         
     }
     
 	
 
-	render() {
+	render() { // рендер - рендерить блоки які будуть відображатись на екрані
 		return (
             
 			<div className="register">

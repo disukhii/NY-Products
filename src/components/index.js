@@ -4,3 +4,6 @@ export { default as PizzaBlock } from './PizzaBlock';
 export { default as PopupMenu } from './PopupMenu';
 export { default as SortPopup } from './SortPopup';
 export { default as CartItem } from './CartItem';
+
+
+// export усіх файлів для зручності їх витягування

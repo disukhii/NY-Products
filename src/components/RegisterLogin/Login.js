@@ -5,18 +5,18 @@ import Register from './Register'
 
 
 
-class Login extends Register {
+class Login extends Register { // -- класовий компонент
 	constructor(props) {
 		super(props);
 
-		this.state = {
+		this.state = { // - state -  обьэкт
 			email: '',
             password: ''
 		};
 
-		this.update = this.update.bind(this);
+		this.update = this.update.bind(this); // дозволяє вносити зміни в input
 
-		this.displayLogin = this.displayLogin.bind(this);
+		this.displayLogin = this.displayLogin.bind(this); // дозволяє зберігати дані з input
 		console.log(this.state)
 	}
 
@@ -24,14 +24,14 @@ class Login extends Register {
 		let name = e.target.name;
 		let value = e.target.value;
 		this.setState({
-			[name]: value
+			[name]: value  // присваює значення у порядку ключа і значення
 		});
 	}
 
 	displayLogin(e) {
 		e.preventDefault();
 		console.log('You are logged in');
-		console.log(this.state);
+		console.log(this.state);  // перевірочна станція чи все працює
 		
 	}
 

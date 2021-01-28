@@ -7,13 +7,13 @@ import './PizzaBlock.scss';
 
 const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd, isLoading, category}, price2, categoryes) => {
   categoryes = 0
-  
+  // 
   const typeNames = ['тонка', 'корка з сосискою'];
   const availableSizes = [26, 30, 40];
   const addedCount = cartItems[id] ? cartItems[id].length : 0;
   categoryes = category + 0
-  const [size, setSize] = React.useState(availableSizes[0]);
-  const [type, setType] = React.useState(0);
+  const [size, setSize] = React.useState(availableSizes[0]); // useState() - size зміниться тільки при виконанні функції setSize, availableSizes[0] - вказали індекс з якого масиву будуть братись дефолтні дані
+  const [type, setType] = React.useState(0); // useState()
 
   const onAddClick = () => {
     const obj = {
@@ -30,7 +30,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
   };
   
 
-  const SelectorForCategory = (value) => {
+  const SelectorForCategory = (value) => { // функція яка визначає чи належить продукт 1-й категорії, щоб рендерити блок з вибором (розмір піци, з коркою чи тонка)
     let category = (value) => {
       if (value === 1) {
        return( <div className="pizza-block__selector">
@@ -71,6 +71,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
     
     )
   }
+  // зміна ціни призміні розміру
  price2 = 0
   if (size === 26) {
    price2 = price

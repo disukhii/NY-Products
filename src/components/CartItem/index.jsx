@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-const CartItem = (props) => {
+const CartItem = (props) => {           // функція з параметром пропс яка потім експортується
   let { imageUrl, name, type, size, price, count, onMinus, onPlus, onRemove, price2 } = props;
    price2 = 0
   if (size === 26) {
@@ -12,17 +12,17 @@ const CartItem = (props) => {
   price2 = price + 26
  } else if (size === 40) {
      price2 = price + 63
- } 
+ } // умова при зміні типу піци то ціна плюсується
   const typeNames = ['тонка', 'корка зі сосискою'];
   return (
     <div class="cart__item">
       <div class="cart__item-img">
         <img class="pizza-block__image" src={imageUrl} alt="Pizza" />
       </div>
-      <div class="cart__item-info">
+      <div class="cart__item-info"> 
         <h3>{name}</h3>
         <p>
-         Ви замовили: {typeNames[type]} , {size} см.
+         Ви замовили: {typeNames[type]} , {size} см. 
         </p>
       </div>
       <div class="cart__item-count">
