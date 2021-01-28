@@ -6,7 +6,8 @@ const initState = {
   isLoading: false,
   error: null,
 };
-
+// Реалізація прогрузки товару, якщо поставити повільний інтернет загрузки сторінки(в браузері можна),
+// буде видно що викликається skelet бібліотека ы буде видно сірі іконки(наш товар), реалізовано для того, щоб покупець бачив шо шось грузить і товар є
 export default (state = initState, action) => {
   return produce(state, draft => {
     switch (action.type) {

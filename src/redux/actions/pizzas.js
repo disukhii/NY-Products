@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'; // бібліотека яка читає дані з db.json (типу наших баз даних)
 
 export const Types = {
   SET_ITEMS: 'PIZZAS@SET:ITEMS',
@@ -7,7 +7,8 @@ export const Types = {
   ERROR: 'PIZZAS@LOADING:ERROR',
 };
 
-
+// Actions - великий обьэкт, який містить в собі функції, ці функції містять параметри по яким редюсер потім буде посилатись
+// тут реалізовано сортування, і сортування товару по категоріям а також прогрузку товарів - (детальніше про прогрузку в редюсері)
 const Actions = {
   setItems: payload => ({
     type: Types.SET_ITEMS,

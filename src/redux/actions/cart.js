@@ -5,7 +5,8 @@ export const Types = {
   REMOVE_ITEMS_BY_ID: 'CART@ITEMS:REMOVE_ITEMS_BY_ID',
   CLEAR_ITEMS: 'CART@ITEMS:CLEAR',
 };
-
+// Тут дані стягуються через dispatch і передаються у reducers
+// Actions це великий обьєкти який містить функції, в тих функціях є параметри які потім будуть викликатись у редюсері
 const Actions = {
   addToCart: ({ id, type, size }) => (dispatch, getState) => {
     const pizzas = getState().pizzas.items;

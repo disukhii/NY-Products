@@ -38,5 +38,6 @@ export default (state = initState, action) => {
     const result = reduce(map(draft.items), (prev, cur) => prev.concat(cur), []);
     draft.totalPrice = result.reduce((total, obj) => obj.price + total, 0);
     draft.itemsCount = result.length;
+   
   });
 };

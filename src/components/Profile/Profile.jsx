@@ -6,7 +6,7 @@ export default class Profile extends Register {
 
         return (
             <div>
-                <p>asdasdasd{this.state.fullname}</p>
+                <p>asdkalsdk{this.state.fullname}</p>
             </div>
         )
     }

@@ -110,7 +110,7 @@ const PizzaBlock = ({ id, imageUrl, name, types, sizes, price, cartItems, onAdd,
     </div>
   );
 };
-export let category2 = 0
+
 PizzaBlock.propTypes = {
   id: PropTypes.number,
   imageUrl: PropTypes.string,
