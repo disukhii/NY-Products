@@ -1,3 +1,8 @@
 .header__cart {
     display: flex;
+    
+}
+
+.button-cart2 {
+    margin-right: 15px;
 }

@@ -31,10 +31,10 @@ function App() {
           <div className="header__cart">
             <Route exact path="/">
               <Link to="/register">
-              <Button className="button--cart"><span>Реєстрація</span></Button>
+             <div className="button-cart2"> <Button className="button--cart"><span>Реєстрація</span></Button></div>
               </Link>
               <Link to="/profile">
-              <Button className="button--cart"><span>Профіль</span></Button>
+             <div className="button-cart2"> <Button className="button--cart" id="button--cart2"><span>Профіль</span></Button></div>
               </Link>
               <Link to="/cart">
                 <Button className="button--cart">
